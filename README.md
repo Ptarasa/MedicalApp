@@ -85,4 +85,4 @@ You can even dowload the the entire SQL Installer if you do not have SQL in your
 
 Spring Tool Suite:  https://spring.io/tools
 
-Tool mostly used for spring and maven projects. You can also use Eclipse by create the file in spring Initializer and importing it.
+Tool mostly used for spring and maven projects. You can also use Eclipse by creating the file in spring Initializer and importing it.
