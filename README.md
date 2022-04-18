@@ -21,28 +21,15 @@ There are two Repositories for each entity and implements JpaRepository.
 **User Repository(UserRepo)** consists of queries to check email existence while signing up and login.
 
 Query to check the if email and password match for login.
-
-**@Query(value = "SELECT * FROM users  WHERE email = ?1 and password = ?2",
-		       nativeQuery = true)
-	User validateCredentials(String email, String password);**
+checking if the email and password entered exists in the user table
 
 Query to check if email exists during creation of account
-
-**@Query(value = "SELECT * FROM users  WHERE email = ?1",
-		       nativeQuery = true)
-User emailExists(String email);**
+checking if the email entered exists in the user table
 
 **Form Repository(FormRepo)** 
 
 consists of the query to populate all users on a particular date.
-
-**@Query("SELECT " +
-	           "    new com.example.demo.UserDto(u.id,u.email,u.password,u.firstname,u.lastname) " +
-	           "FROM " +
-	           "User u, Form f " +
-	           "where u.id = f.id AND f.date= ?1")
-	public List<UserDto> findAll(String date);**
-
+checking if the any user has filled a form on a particular date.
   
 **Services:**
 There are 2 service files.
