@@ -61,5 +61,28 @@ It has Jpa properties to allow us the CRUD implementation and the hibernate dial
   
 **POM.xml**
 This has all the dependencies used in the application.
-e.g. Bootstrap, thymeleaf, JPA, Spring Boot, Web jars, Web services, Devtools.
+e.g. Bootstrap, thymeleaf, JPA, Spring Boot, Web jars, Web services, Devtools,Lombak.
+Lombak is used to reduce boiler plate code.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Technical Specification:**
+
+Java Version: 11
+
+Spring Boot Version: 2.6.6
+
+BootStrap Version: 4.6.0-1
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Download links:**
+
+Mysql workbench:  https://dev.mysql.com/downloads/workbench/
+
+Connect to the lost host or default host. 
+You can even dowload the the entire SQL Installer if you do not have SQL in your system. It consists of MySQl, MySql workbench, commandline for SQL.
+
+Spring Tool Suite:  https://spring.io/tools
+
+Tool mostly used for spring and maven projects. You can also use Eclipse by create the file in spring Initializer and importing it.
