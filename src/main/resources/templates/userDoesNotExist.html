@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>
+Home
+</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body style="background-image: linear-gradient(to right,#ffff, #779cd9, #617fb0, #485b7a, #3c4f6e#ffff, #779cd9, #617fb0, #485b7a, #3c4f6e);">
+	<div class="topnav"  style="background-color:black; float: right; text-align: center; padding: 14px 16px; text-decoration: none;
+  font-size: 17px;">
+		  <a class="active" href="/" style="color:aliceblue;" >Home</a>
+	</div>
+	<h1> Email or Password was Incorrect </h1>
+	<center>
+	<div style='border:4px black solid; font-size:16px; margin:0 auto; max-width:600px;'>
+		<h3> <label>Create Account </label> <br> 
+			<button type="button" th:onclick="|window.location.href='/register'|" class="btn btn-primary"> SignIn </button></h3>
+		<h3> <label>Try Logging in again </label> <br> 
+			<button type="button" th:onclick="|window.location.href='/log-in'|" class="btn btn-primary"> LogIn </button></h3>
+	</div>
+	</center>
+</body>
+</html>

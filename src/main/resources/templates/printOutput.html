@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>
+Result
+</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body style="background-image: linear-gradient(to right,#ffff, #779cd9, #617fb0, #485b7a, #3c4f6e);">
+	<div class="topnav"  style="background-color:black; float: right; text-align: center; padding: 14px 16px; text-decoration: none;
+  font-size: 17px;">
+		  <a class="active" href="/" style="color:aliceblue;" >Home</a>
+	</div>
+	<h1> List of users who filled the form </h1>
+	<div>
+		<table class="table" style='border:4px black solid; font-size:16px; margin:0 auto; max-width:600px;'>
+                <thead align="center">
+                    <tr >
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody align="center">
+                    <tr th:each="user : ${userInfoDetails}">
+                        <td th:text="${user.firstname}"></td>
+                        <td th:text="${user.lastname}"></td>
+                        <td th:text="${user.email}"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <br>
+    <div style='border:2px black dashed; font-size:14px; margin:0 auto; align:"left"' >
+    <h4>
+    	<div>
+	    	<label>Login to fill a form </label> <br> 
+			<button type="button" th:onclick="|window.location.href='/log-in'|" class="btn btn-primary" style ="background-color:black"> Login </button>
+		</div>
+		
+    </h4>
+    </div>
+</body >
+</html>

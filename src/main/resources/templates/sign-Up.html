@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>
+	Sign Up
+</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body style="background-image: linear-gradient(to right,#ffff, #779cd9, #617fb0, #485b7a, #3c4f6e);">
+	<div class="topnav"  style="background-color:black; float: right; text-align: center; padding: 14px 16px; text-decoration: none;
+  font-size: 17px;">
+		  <a class="active" href="/" style="color:aliceblue;" >Home</a>
+	</div>
+	<div style="border:black; border-width:8px; border-style:solid;  max-width:600px align=fit-content">
+		<div>
+		<h1> Create your Account </h1>
+		<div>
+		<form th:action= "@{/registration}" method = "post" 
+			style='border:4px black solid; font-size:16px; margin:0 auto; max-width:600px;'
+			th:object = "${user}"
+			>
+			<div class="m-3">
+				<div class = "form-group row">
+					<label class="col-form-label col-4">E-mail</label>
+					<div class="col-8">
+						<input type="email" class = "form-control" th:field="*{email}" required/>
+					</div>
+				</div>
+				
+				<div class = "form-group row">
+					<label class="col-form-label col-4">Password</label>
+					<div class="col-8">
+						<input type="password" class = "form-control" th:field="*{password}" required
+						minlength = "6" maxlength="10"/>
+					</div>
+				</div>
+				
+				<div class = "form-group row">
+					<label class="col-form-label col-4">First Name</label>
+					<div class="col-8">
+						<input type="text" class = "form-control" th:field="*{firstname}" required
+						minlength = "2" maxlength="15"/>
+					</div>
+				</div>
+				
+				<div class = "form-group row">
+					<label class="col-form-label col-4">Last Name</label>
+					<div class="col-8">
+						<input type="text" class = "form-control" th:field="*{lastname}" required
+						minlength = "2" maxlength="15"/>
+					</div>
+				</div>
+					
+				<div>
+					<button type="submit" class="btn btn-primary" style ="background-color:black"> Sign Up </button>
+					<span>Already registered? <a href="/" th:href="@{/log-in}" style="color:aliceblue">Login
+	        here</a></span>
+				</div> 
+			</div> 
+		</form> 
+		</div>
+		<br>
+	</div>
+</body>
+</html>

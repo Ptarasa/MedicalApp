@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>
+Home
+</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body style="background-image: linear-gradient(to right,#ffff, #779cd9, #617fb0, #485b7a, #3c4f6e);">
+	<div class="topnav"  style="background-color:black; float: right; text-align: center; padding: 14px 16px; text-decoration: none;
+  font-size: 17px;">
+		  <a class="active" href="/" style="color:aliceblue;" >Home</a>
+	</div>
+	<div style="border:black; border-width:8px; border-style:solid;  max-width:600px align=fit-content">
+		<h1> Complete the following details </h1>
+		<div>
+		<fieldset>
+			<form th:action= "@{/filled-form}" method ="post" th:object="${userResponse}" 
+			style='border:4px black solid; font-size:16px; margin:0 auto; max-width:600px;' align="center">
+			<!-- style="max-width: 600px; margin:0 auto;"> -->
+				<div class="m-3">
+					<div class = "form-group row">
+						<input type="hidden"  th:attr="name='id'"  th:value="${id}" />
+	                    <input type="hidden"  th:attr="name='email'"  th:value="${user.email}" />
+						<label>Enter todays date </label>
+						<p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</p>
+						<input type = "date" id="date" autofocus="autofocus" name="date" required>
+					</div>
+				
+					<div class = "form-group">
+						<label>Are you experiencing any flu symptoms-like cold, cough? </label>
+						<div>
+							<input class="form-check-input" type = "radio" id="cold1" name="cold"  value="Yes" required>
+							<label class = "form-check-label" for="cold1"> Yes </label>
+						</div>
+						<br>
+						<div>
+							<input class="form-check-input" type = "radio" id="cold2" name="cold"  value="No" required>
+							<label class = "form-check-label" for="cold2"> No </label>
+						</div>
+					</div>
+					
+					<div class = "form-group">
+						<label>Are you experiencing any of these conditions: Stomach upset, vomiting, fatigue?</label>
+						<div>
+							<input class="form-check-input" type = "radio" id="symptoms1" name="symptoms"  value="Yes" required>
+							<label class = "form-check-label" for="symptoms1"> Yes </label>
+						</div>
+						<br>
+						<div>
+							<input class="form-check-input" type = "radio" id="symptoms2" name="symptoms"  value="No" required>	
+							<label class = "form-check-label" for="Symptoms2"> No</label>
+						</div>
+					</div>
+					
+					<div class = "form-group">
+						<label>Are you suffering from shortness of breath or other respiratory problems? </label>
+						<div>
+							<input class="form-check-input" type = "radio" id="breathing1" name="breathing"  value="Yes" required>
+							<label class = "form-check-label" for="breathing1"> Yes </label>
+						</div>
+						<br>
+						<div>
+							<input class="form-check-input" type = "radio" id="breathing2" name="breathing"  value="No" required>
+							<label class = "form-check-label" for="breathing2"> No </label>	
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<button type="submit" class="btn btn-primary" style ="background-color:black"> Submit </button>
+				</div>
+				<br>
+			</form>
+		</fieldset>
+		</div>
+		<br>
+	</div>
+</body>
+</html>

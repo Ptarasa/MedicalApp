@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>
+Home
+</title>
+<style>
+.my-block {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+</style>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+<link  href="/style.css" type="text/css" rel="stylesheet">
+</head>
+<body style="background-image: linear-gradient(to right,#ffff, #779cd9, #617fb0, #485b7a, #3c4f6e); padding-bottom:5cm; padding-top:5cm;">
+	<center>
+	<div style="border:black; border-width:5px; border-style:solid;  max-width:600px " class="my-block">
+	<h1 style="border: black; border-width:5px; border-style:solid; background: black; color: #ffff"> Hello, Welcome to the Covid Form </h1>
+		<div>
+			<div>
+				<h3> <label>Click here to create a new account </label> <br>
+				<button type="button" th:onclick="|window.location.href='/register'|" class="btn btn-primary" style ="background-color:black"> Register </button></h3>
+			</div>
+			<div>
+				<h3> <label>Click here to Login </label> <br> 
+				<button type="button" th:onclick="|window.location.href='/log-in'|" class="btn btn-primary" style ="background-color:black"> Login </button></h3>
+			</div>
+			<div>
+				<h3> <label>Find the users who have filled the form </label> <br> 
+					<button type="button" th:onclick="|window.location.href='/find-form'|" class="btn btn-primary" style ="background-color:black"> Find </button> </h3>
+			</div>
+		</div>
+	</div>
+	</center>
+</body >
+</html>

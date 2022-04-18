@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>
+	Success
+</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body style="background-image: linear-gradient(to right,#ffff, #779cd9, #617fb0, #485b7a, #3c4f6e);">
+	<div class="topnav"  style="background-color:black; float: right; text-align: center; padding: 14px 16px; text-decoration: none;
+  font-size: 17px;">
+		  <a class="active" href="/" style="color:aliceblue;" >Home</a>
+	</div>
+	<div style="border:black; border-width:5px; border-style:solid;  max-width:600px " align="center">
+	<center>
+		<h1 style="border: black; border-width:5px; border-style:solid; background: black; color: #ffff"> Registration was a success </h1>
+		<div>
+			<h3> <label>Login in here </label> <br>
+			<button type="button" th:onclick="|window.location.href='/log-in'|" class="btn btn-primary" style ="background-color:black"> Login </button></h3>
+		</div>
+		<br>
+	</center>
+	</div>
+</body>
+</html>

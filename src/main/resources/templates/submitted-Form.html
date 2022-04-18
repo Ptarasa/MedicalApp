@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>
+Submitted
+</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body style="background-image: linear-gradient(to right,#ffff, #779cd9, #617fb0, #485b7a, #3c4f6e);">
+	<div class="topnav"  style="background-color:black; float: right; text-align: center; padding: 14px 16px; text-decoration: none;
+  font-size: 17px;">
+		  <a class="active" href="/" style="color:aliceblue;" >Home</a>
+	</div>
+	<h1> Your Form has been submitted</h1>
+	<center>
+	<div style='border:4px black solid; font-size:16px; margin:0 auto; max-width:600px;'>
+		<h3> <label>Click here to Logout </label> <br> 
+			<button type="button" th:onclick="|window.location.href='/log-out'|" class="btn btn-primary" style ="background-color:black"> Logout </button></h3>
+	</div>
+	</center>
+</body>
+</html>

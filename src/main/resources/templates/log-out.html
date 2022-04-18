@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>
+Home
+</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body style="background-image: linear-gradient(to right,#ffff, #779cd9, #617fb0, #485b7a, #3c4f6e);  padding-bottom:5cm; padding-top:5cm;">
+	<center>
+	<h1> Logged out </h1>
+	<div style='border:4px black solid; font-size:16px;  max-width:600px;'>
+		<h3> <label>Return to HomePage </label> <br> 
+			<button type="button" th:onclick="|window.location.href='/'|" class="btn btn-primary" style ="background-color:black"> HomePage </button></h3>
+	</div>
+	</center>
+</body>
+</html>
